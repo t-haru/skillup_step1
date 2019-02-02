@@ -19,14 +19,17 @@ $ docker-compose down
 ## URL
 
 index.php  
-http://localhost:9000
+http://192.168.99.100:9000
+
+sql.php
+http://192.168.99.100:9000/sql.php
 
 pgadmin  
-http://localhost:5050
+http://192.168.99.100:9000:5050
 
 
 ## ディレクトリ構成
-* phpなコンテンツは./appに配置となります
+* phpなコンテンツは./appに配置
 * nginxの設定は./nginx/site.conf
 
 ```
@@ -53,7 +56,7 @@ PASS：SuperSecret
 
 データベースの追加は以下の通り
 ```
-サーバー名：自由に決めて
+サーバー名：DB
 HOSTNAME：pgsql
 DBNAME：postgres
 USERNAME：postgres
